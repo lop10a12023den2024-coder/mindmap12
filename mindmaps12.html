@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<title>Sơ đồ tư duy - Saccharose & Maltose</title>
+<style>
+  body {
+    font-family: 'Segoe UI', sans-serif;
+    background: linear-gradient(135deg, #d4fc79, #96e6a1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+  }
+  h1 {
+    color: #2e7d32;
+    text-shadow: 1px 1px 2px #fff;
+    margin-bottom: 10px;
+  }
+  .creator {
+    font-size: 14px;
+    color: #333;
+    margin-bottom: 20px;
+  }
+  .mindmap {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+    max-width: 1000px;
+  }
+  .node {
+    background: white;
+    border-radius: 15px;
+    padding: 15px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    cursor: pointer;
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+    max-width: 250px;
+    text-align: center;
+  }
+  .node:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 18px rgba(0,0,0,0.25);
+  }
+  .content {
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+    margin-top: 0;
+    transition: max-height 0.6s ease, opacity 0.6s ease, margin-top 0.3s ease;
+    text-align: left;
+  }
+  .content.show {
+    max-height: 400px;
+    opacity: 1;
+    margin-top: 10px;
+  }
+  button {
+    background: #4caf50;
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: background 0.25s;
+  }
+  button:hover {
+    background: #388e3c;
+  }
+</style>
+</head>
+<body>
+  <h1>Sơ đồ tư duy: Saccharose và Maltose</h1>
+  <div class="creator">📌 Creator: Nguyễn Năng – Lớp 12A1</div>
+
+  <div class="mindmap">
+    <div class="node">
+      <h3>1. Saccharose</h3>
+      <button onclick="toggleContent(this)">Xem chi tiết</button>
+      <div class="content">
+        <p>- Công thức: C<sub>12</sub>H<sub>22</sub>O<sub>11</sub></p>
+        <p>- Có trong mía, củ cải đường.</p>
+        <p>- Tan tốt trong nước, có vị ngọt.</p>
+        <p>- Phản ứng thủy phân tạo Glucose + Fructose.</p>
+      </div>
+    </div>
+
+    <div class="node">
+      <h3>2. Tính chất hóa học</h3>
+      <button onclick="toggleContent(this)">Xem chi tiết</button>
+      <div class="content">
+        <p>- Không có tính khử (do không có nhóm -CHO tự do).</p>
+        <p>- Tham gia phản ứng thủy phân trong môi trường axit.</p>
+        <p>- Thủy phân: C<sub>12</sub>H<sub>22</sub>O<sub>11</sub> + H<sub>2</sub>O → Glucose + Fructose.</p>
+      </div>
+    </div>
+
+    <div class="node">
+      <h3>3. Maltose</h3>
+      <button onclick="toggleContent(this)">Xem chi tiết</button>
+      <div class="content">
+        <p>- Công thức: C<sub>12</sub>H<sub>22</sub>O<sub>11</sub>.</p>
+        <p>- Là đường mạch ngắn, có trong mạch nha.</p>
+        <p>- Gồm 2 phân tử glucose.</p>
+        <p>- Có tính khử do còn nhóm -CHO tự do.</p>
+      </div>
+    </div>
+
+    <div class="node">
+      <h3>4. Tính chất của Maltose</h3>
+      <button onclick="toggleContent(this)">Xem chi tiết</button>
+      <div class="content">
+        <p>- Có phản ứng tráng bạc.</p>
+        <p>- Bị thủy phân thành 2 phân tử glucose.</p>
+        <p>- Tan tốt trong nước, có vị ngọt nhẹ.</p>
+      </div>
+    </div>
+
+    <div class="node">
+      <h3>5. Ứng dụng</h3>
+      <button onclick="toggleContent(this)">Xem chi tiết</button>
+      <div class="content">
+        <p>- Saccharose: nguyên liệu sản xuất bánh kẹo, nước giải khát.</p>
+        <p>- Maltose: dùng trong sản xuất bia, sữa mạch nha, cung cấp năng lượng.</p>
+      </div>
+    </div>
+
+    <div class="node">
+      <h3>6. So sánh nhanh</h3>
+      <button onclick="toggleContent(this)">Xem chi tiết</button>
+      <div class="content">
+        <ul>
+          <li>Saccharose: không khử, tạo Glucose + Fructose</li>
+          <li>Maltose: có tính khử, tạo Glucose + Glucose</li>
+          <li>Đều có công thức C<sub>12</sub>H<sub>22</sub>O<sub>11</sub></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+<script>
+  function toggleContent(button) {
+    const content = button.nextElementSibling;
+    content.classList.toggle('show');
+  }
+</script>
+</body>
+</html>
